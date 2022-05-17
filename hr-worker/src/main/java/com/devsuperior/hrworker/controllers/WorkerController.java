@@ -20,9 +20,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/workers")
 public class WorkerController {
-    private static Logger logger = LoggerFactory.getLogger(WorkerController.class);
-    private WorkerService workerService;
-    private Environment env;
+    private static final Logger logger = LoggerFactory.getLogger(WorkerController.class);
+    private final WorkerService workerService;
+    private final Environment env;
 
     @Value("${test.config}")
     private String testConfig;
