@@ -24,8 +24,8 @@ public class WorkerController {
     private final WorkerService workerService;
     private final Environment env;
 
-    @Value("${test.config}")
-    private String testConfig;
+//    @Value("${test.config}")
+//    private String testConfig;
 
     public WorkerController(WorkerService workerService,  Environment env){
         this.workerService = workerService;
@@ -34,7 +34,7 @@ public class WorkerController {
 
     @GetMapping("/configs")
     public ResponseEntity<Void> getConfigs(){
-        logger.info("CONFIG = " + testConfig);
+//        logger.info("CONFIG = " + testConfig);
         return ResponseEntity.noContent().build();
     }
 
